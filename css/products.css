@@ -1,0 +1,368 @@
+/* ============================================================
+   PRODUCTS PAGE
+   ============================================================ */
+
+#productsParticles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: #000;
+}
+
+.products-page,
+.products-wrapper,
+.cta-section,
+#footer {
+  position: relative;
+  z-index: 1;
+}
+
+#header {
+  position: relative;
+  z-index: 1000;
+}
+
+.products-wrapper {
+  padding: calc(var(--nav-h) + 72px) 0 100px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 56px 40px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.product-feature:last-of-type {
+  border-bottom: none;
+}
+
+.product-feature:nth-child(even) .product-feature__media {
+  order: 2;
+}
+
+.product-feature:nth-child(even) .product-feature__copy {
+  order: 1;
+}
+
+.product-feature__kicker {
+  font-family: var(--font-head);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.product-feature__title {
+  font-family: var(--font-head);
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.product-feature__desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 560px;
+}
+
+.product-feature__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.product-feature__media img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, .07);
+  box-shadow: var(--shadow);
+}
+
+.products-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #0a0a0a;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.products-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.7s ease, filter 0.7s ease, opacity 0.7s ease;
+}
+
+.products-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 45%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.8s ease;
+  pointer-events: none;
+}
+
+.products-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.32) 100%),
+    radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.22) 100%);
+  pointer-events: none;
+}
+
+.products-image:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  transform: translateY(-4px);
+}
+
+.products-image:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.12) contrast(1.05);
+  opacity: 0.96;
+}
+
+.products-image:hover::before {
+  transform: translateX(120%);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .products-wrapper {
+    padding: calc(var(--nav-h) + 48px) 0 80px;
+  }
+
+  .product-feature {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 44px 0;
+  }
+
+  .product-feature:nth-child(even) .product-feature__media,
+  .product-feature:nth-child(even) .product-feature__copy {
+    order: unset;
+  }
+
+  .product-feature__desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .products-wrapper {
+    padding: calc(var(--nav-h) + 32px) 0 64px;
+  }
+
+  .product-feature {
+    gap: 32px;
+    padding: 32px 0 44px;
+  }
+
+  .product-feature__title {
+    font-size: clamp(26px, 9vw, 34px);
+  }
+
+  .product-feature__desc {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+
+  .product-feature__actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .product-feature__actions .btn {
+    width: 100%;
+  }
+
+  .products-image {
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .product-feature {
+    padding: 28px 0 40px;
+  }
+
+  .product-feature__title {
+    font-size: 25px;
+  }
+}
+
+/* ============================================================
+   PUBLIC PORTFOLIO — ABSTRACT VISUAL OVERLAYS
+   ============================================================ */
+
+.proj__bg,
+.project-placeholder,
+.about-visual,
+.products-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.proj__bg::before,
+.project-placeholder::before,
+.about-visual::before,
+.products-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 28% 28%, rgba(0, 196, 255, 0.24), transparent 34%),
+    radial-gradient(circle at 75% 65%, rgba(255, 0, 180, 0.16), transparent 38%),
+    linear-gradient(135deg, rgba(0, 196, 255, 0.10), rgba(106, 92, 255, 0.08) 45%, rgba(255, 0, 180, 0.08));
+  pointer-events: none;
+}
+
+.proj__bg::after,
+.project-placeholder::after,
+.about-visual::after,
+.products-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.46));
+  pointer-events: none;
+}
+
+.proj--fayson .proj__bg,
+.project-placeholder--photography {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(0, 196, 255, .25) 0%, transparent 60%),
+    linear-gradient(160deg, #07101d, #0d2344, #123b6f) !important;
+}
+
+.proj--maromba .proj__bg,
+.project-placeholder--drinks {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(255, 0, 180, .18) 0%, transparent 58%),
+    radial-gradient(ellipse at 25% 80%, rgba(0, 196, 255, .16) 0%, transparent 55%),
+    linear-gradient(160deg, #09030f, #101a37, #112c4f) !important;
+}
+
+.proj--economy .proj__bg,
+.project-placeholder--newsletter {
+  background:
+    radial-gradient(ellipse at 50% 60%, rgba(0, 196, 255, .22) 0%, transparent 60%),
+    linear-gradient(160deg, #001018, #041f36, #063a58) !important;
+}
+
+.proj--mythoss .proj__bg,
+.project-placeholder--automotive {
+  background:
+    radial-gradient(ellipse at 65% 35%, rgba(255, 255, 255, .12) 0%, transparent 58%),
+    radial-gradient(ellipse at 30% 70%, rgba(0, 196, 255, .14) 0%, transparent 55%),
+    linear-gradient(160deg, #070707, #101725, #1a2335) !important;
+}
+
+.project-placeholder {
+  min-height: 320px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background-color: #0a0a0a;
+  box-shadow: var(--shadow);
+}
+
+.project-showcase__placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 28px;
+}
+
+.project-gallery__item {
+  aspect-ratio: 4 / 5;
+  min-height: 280px;
+  border-radius: 20px;
+}
+
+.about-visual {
+  min-height: 420px;
+  aspect-ratio: 4 / 3;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background-color: #0a0a0a;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, .6);
+}
+
+.about-visual--studio {
+  background:
+    radial-gradient(circle at 30% 35%, rgba(0, 196, 255, .22), transparent 35%),
+    radial-gradient(circle at 70% 70%, rgba(255, 0, 180, .14), transparent 38%),
+    linear-gradient(145deg, #05070d, #0b1c32, #0f2746) !important;
+}
+
+.about-visual--performance {
+  background:
+    radial-gradient(circle at 52% 45%, rgba(0, 196, 255, .24), transparent 32%),
+    radial-gradient(circle at 75% 65%, rgba(106, 92, 255, .20), transparent 38%),
+    linear-gradient(145deg, #030509, #071426, #0b2f4d) !important;
+}
+
+.products-image--template,
+.products-image--landing {
+  background:
+    radial-gradient(circle at 30% 35%, rgba(0, 196, 255, .22), transparent 34%),
+    radial-gradient(circle at 76% 62%, rgba(255, 0, 180, .14), transparent 38%),
+    linear-gradient(145deg, #030509, #071426, #0b2f4d) !important;
+}
+
+.products-image {
+  min-height: 320px;
+}
+
+@media(max-width:900px) {
+  .about-visual {
+    min-height: 320px;
+  }
+
+  .project-placeholder {
+    min-height: 280px;
+  }
+}
+
+@media(max-width:560px) {
+  .products-image,
+  .about-visual,
+  .project-placeholder {
+    min-height: 240px;
+  }
+}

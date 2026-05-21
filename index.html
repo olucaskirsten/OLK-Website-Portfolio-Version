@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OLK Web &amp; SEO — Web Design, Development &amp; SEO</title>
+<link href="img/favicon.png" rel="icon" type="image/png"/>
+<script>
+    if (sessionStorage.getItem("olkPageTransition") === "true") {
+      document.documentElement.classList.add("has-page-transition");
+    }
+  </script>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/index.css" rel="stylesheet"/>
+<link href="css/hero-animation.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+<div aria-hidden="true" class="page-transition">
+<span class="page-transition__panel"></span>
+<span class="page-transition__panel"></span>
+<span class="page-transition__panel"></span>
+</div>
+<div class="page-loader" id="page-loader">
+<div class="page-loader__inner">
+<img alt="OLK Web &amp; SEO" class="page-loader__logo" src="img/olkbr-1-1.png"/>
+<div class="page-loader__bar">
+<span id="loaderProgressBar"></span>
+</div>
+<p class="page-loader__text">
+<span id="loaderPercent">0%</span> loading experience
+      </p>
+</div>
+</div>
+<div id="header"></div>
+<section class="hero">
+<div id="tsparticles"></div>
+<div class="hero-bg-animation">
+<div class="hero-orb hero-orb-1"></div>
+<div class="hero-orb hero-orb-2"></div>
+<div class="hero-orb hero-orb-3"></div>
+</div>
+<div class="hero__grid-bg" id="heroParallax"></div>
+<div class="hero__blob hero__blob--1"></div>
+<div class="hero__blob hero__blob--2"></div>
+<div class="hero__content">
+<p class="hero__eyebrow fade-up" data-i18n="home.hero.eyebrow">Web Design &amp; SEO Studio</p>
+<h1 class="hero__title fade-up d1" data-i18n-html="home.hero.title">Designing and Developing <span class="bracket">&lt;</span><span class="accent">High-Performance Websites</span><span class="bracket">&gt;</span> that Drive Real Business Growth.</h1>
+<p class="hero__sub fade-up d2" data-i18n="home.hero.sub">Web Design, Front-end Development, E-commerce, SEO and Paid Traffic for brands all around the world.</p>
+<div class="hero__ctas fade-up d3">
+<a class="btn btn-white" data-i18n="home.hero.cta1" href="portfolio.html">View Work</a>
+<a class="btn btn-grad" data-i18n="home.hero.cta2" href="contact.html">Get in Touch</a>
+</div>
+</div>
+</section>
+<section class="brands">
+<div class="container">
+<p class="section-label brands__label" data-i18n="home.brands.label">Brands that trusted us</p>
+<div class="brands__row">
+<div class="brands__logo">
+<img alt="Premium Drinks Brand" src="img/logo-mansao-maromba.png"/>
+</div>
+<div class="brands__logo">
+<img alt="Probiótica" src="img/logo-probiotica.png"/>
+</div>
+<div class="brands__logo">
+<img alt="V4 Company" src="img/logo-v4.png"/>
+</div>
+<div class="brands__logo">
+<img alt="Photography Portfolio" src="img/logo-fayson.png"/>
+</div>
+<div class="brands__logo">
+<img alt="Velox" src="img/logo-velox.png"/>
+</div>
+</div>
+</div>
+</section>
+<section class="services-section">
+<div class="container">
+<div class="services-section__header">
+<p class="section-label services-section__label" data-i18n="home.services.label">What we do</p>
+<h2 class="services-section__title" data-i18n="home.services.title">We help brands build fast, scalable and conversion-focused digital experiences.</h2>
+<p class="services-section__sub" data-i18n="home.services.sub">From design and development to traffic and SEO — everything built with performance in mind.</p>
+</div>
+<div class="services-cards">
+<div class="service-card">
+<div class="service-card__icon">🖥</div>
+<h3 class="service-card__title" data-i18n="home.services.card1">Web Design &amp; Front-End Development</h3>
+</div>
+<div class="service-card">
+<div class="service-card__icon">🛒</div>
+<h3 class="service-card__title" data-i18n="home.services.card2">E-Commerce Setup</h3>
+</div>
+<div class="service-card">
+<div class="service-card__icon">📣</div>
+<h3 class="service-card__title" data-i18n="home.services.card3">Paid Traffic (Meta Ads)</h3>
+</div>
+<div class="service-card">
+<div class="service-card__icon">📈</div>
+<h3 class="service-card__title" data-i18n="home.services.card4">SEO (Search Engine Optimization) — Google</h3>
+</div>
+</div>
+<div class="services-section__footer"><a class="btn btn-grad" data-i18n="home.services.cta" href="services.html">View All Services</a></div>
+</div>
+</section>
+<section class="portfolio-section">
+<div class="container">
+<div class="portfolio-section__header">
+<p class="section-label portfolio-section__label" data-i18n="home.portfolio.label">Selected work</p>
+<h2 class="portfolio-section__title" data-i18n="home.portfolio.title">A selection of projects built for different industries, markets and business models.</h2>
+<p class="portfolio-section__sub" data-i18n="home.portfolio.sub">Always focused on clarity, usability and results.</p>
+</div>
+<div class="portfolio-grid">
+<a class="project-card project-card--fayson" href="photography-portfolio.html">
+<div class="project-card__bg"></div>
+<div class="project-card__overlay"></div>
+<span class="project-card__arrow">→</span>
+<div class="project-card__content">
+<p class="project-card__label" data-i18n="home.portfolio.p1.label">Photography Portfolio</p>
+<h3 class="project-card__title">
+              Photography Portfolio
+            </h3>
+</div>
+</a>
+<a class="project-card project-card--economy" href="newsletter-landing-page.html">
+<div class="project-card__bg"></div>
+<div class="project-card__overlay"></div>
+<span class="project-card__arrow">→</span>
+<div class="project-card__content">
+<p class="project-card__label" data-i18n="home.portfolio.p3.label">Newsletter Landing Page</p>
+<h3 class="project-card__title">
+              Newsletter Landing Page
+            </h3>
+</div>
+</a>
+</div>
+<div class="portfolio-section__footer"><a class="btn btn-outline" data-i18n="home.portfolio.cta" href="portfolio.html">View Full Portfolio</a></div>
+</div>
+</section>
+<section class="about-section">
+<div class="container">
+<div class="about-section__grid">
+<div>
+<p class="section-label about-section__label" data-i18n="home.about.label">About us</p>
+<h2 class="about-section__title" data-i18n="home.about.title">Experience that goes beyond design</h2>
+<p class="about-section__body" data-i18n-html="home.about.body">We've been building high-performance websites and digital strategies across different industries, combining design, technology and marketing strategy to deliver real results.<br/><br/>Our approach focuses on user experience, speed and conversion — ensuring every project is not only visually strong, but strategically effective.</p>
+</div>
+<div class="about-section__stats">
+<div class="stat-block">
+<div class="stat-block__num">6+</div>
+<div class="stat-block__label" data-i18n="home.about.s1.label">Years of professional experience</div>
+</div>
+<div class="stat-block">
+<div class="stat-block__num">100+</div>
+<div class="stat-block__label" data-i18n="home.about.s2.label">Projects delivered globally</div>
+</div>
+<div class="stat-block">
+<div class="stat-block__num">100%</div>
+<div class="stat-block__label" data-i18n="home.about.s3.label">Performance-focused approach</div>
+</div>
+<div class="stat-block">
+<div class="stat-block__num">∞</div>
+<div class="stat-block__label" data-i18n="home.about.s4.label">Industries served worldwide</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="teasers">
+<div class="container">
+<div class="teasers__grid">
+<div class="teaser-card">
+<div class="teaser-card__icon">📦</div>
+<h3 class="teaser-card__title" data-i18n="home.teaser1.title">Digital Products</h3>
+<p class="teaser-card__body" data-i18n="home.teaser1.body">Conversion-focused landing page templates and ready-to-use design products, created to speed up launches and improve results.</p><a class="btn btn-white" data-i18n="home.teaser1.cta" href="products.html">Explore Products</a>
+</div>
+<div class="teaser-card">
+<div class="teaser-card__icon">📞</div>
+<h3 class="teaser-card__title" data-i18n="home.teaser2.title">Start a Project</h3>
+<p class="teaser-card__body" data-i18n="home.teaser2.body">Ready to build something that actually converts? Let's talk about your goals and create a digital experience that performs.</p><a class="btn btn-white" data-i18n="home.teaser2.cta" href="contact.html">Contact Us</a>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<div class="container">
+<h2 class="cta-section__title" data-i18n="home.cta.title">Let's build something that actually works.</h2>
+<p class="cta-section__sub" data-i18n="home.cta.sub">If you're looking for a website built with clarity, performance and long-term growth in mind — let's talk.</p>
+<a class="btn btn-grad" data-i18n="home.cta.btn" href="contact.html">Contact Us</a>
+</div>
+</section>
+<div id="footer"></div>
+<div id="whatsapp"></div>
+<script src="js/preloader.js"></script>
+<script src="js/include.js"></script>
+<script src="js/main.js"></script>
+<script src="js/lang-en.js"></script>
+<script src="js/lang-pt.js"></script>
+<script src="js/lang-es.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/hero-animation.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/page-transition.js"></script>
+<script src="js/cursor.js"></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+.project-page {
+    background: #000;
+    color: #fff;
+}
+
+.project-hero {
+    min-height: 100vh;
+    padding: var(--nav-h) 24px 80px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.project-hero__bg {
+    position: absolute;
+    inset: -20%;
+    background:
+        radial-gradient(circle at 25% 40%, rgba(0, 196, 255, 0.12), transparent 32%),
+        radial-gradient(circle at 75% 45%, rgba(255, 0, 180, 0.10), transparent 34%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px) 0 0 / 64px 64px,
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px) 0 0 / 64px 64px;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.project-hero__inner {
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+}
+
+.project-hero__title {
+    font-family: var(--font-head);
+    font-size: clamp(38px, 7vw, 82px);
+    line-height: 1.05;
+    font-weight: 700;
+    margin: 24px 0;
+}
+
+.project-hero__title .accent {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-hero__sub {
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    font-size: clamp(17px, 2vw, 22px);
+    line-height: 1.75;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.project-intro,
+.project-details,
+.project-gallery,
+.project-result {
+    padding: 0px 0;
+    background: #000;
+}
+
+.project-intro__grid,
+.project-details__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+.project-intro__image,
+.project-details__image {
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #0a0a0a;
+}
+
+.project-intro__image img,
+.project-details__image img,
+.project-showcase img,
+.project-gallery__grid img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.project-intro__content h2,
+.project-details__content h2,
+.project-gallery h2,
+.project-result h2 {
+    font-family: var(--font-head);
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.15;
+    margin: 18px 0 24px;
+}
+
+.project-intro__content p,
+.project-details__content p,
+.project-result p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.85;
+    margin-bottom: 22px;
+}
+
+.project-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.project-list li {
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    display: flex;
+    gap: 12px;
+}
+
+.project-list li::before {
+    content: "✓";
+    width: 20px;
+    height: 20px;
+    background: var(--grad-btn);
+    color: #000;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.project-showcase {
+    padding: 40px 0;
+}
+
+.project-showcase img {
+    border-radius: 28px;
+    border: 1px solid var(--border);
+}
+
+.project-gallery__grid {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.project-gallery__grid img {
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: #0a0a0a;
+}
+
+.project-result__inner {
+    padding-top: 40px;
+    max-width: 760px;
+    text-align: center;
+}
+
+.project-result p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-result .btn {
+    margin-top: 18px;
+}
+
+.is-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+@media (max-width: 900px) {
+
+    .project-intro__grid,
+    .project-details__grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .project-details__image {
+        order: -1;
+    }
+
+    .project-gallery__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-intro,
+    .project-details,
+    .project-gallery,
+    .project-result {
+        padding: 80px 0;
+    }
+}
+
+.project-showcase__video video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.project-showcase__video:hover video {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+/* ============================================================
+   PUBLIC PORTFOLIO — ABSTRACT VISUAL OVERLAYS
+   ============================================================ */
+
+.proj__bg,
+.project-placeholder,
+.about-visual,
+.products-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.proj__bg::before,
+.project-placeholder::before,
+.about-visual::before,
+.products-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 28% 28%, rgba(0, 196, 255, 0.24), transparent 34%),
+    radial-gradient(circle at 75% 65%, rgba(255, 0, 180, 0.16), transparent 38%),
+    linear-gradient(135deg, rgba(0, 196, 255, 0.10), rgba(106, 92, 255, 0.08) 45%, rgba(255, 0, 180, 0.08));
+  pointer-events: none;
+}
+
+.proj__bg::after,
+.project-placeholder::after,
+.about-visual::after,
+.products-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.46));
+  pointer-events: none;
+}
+
+.proj--fayson .proj__bg,
+.project-placeholder--photography {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(0, 196, 255, .25) 0%, transparent 60%),
+    linear-gradient(160deg, #07101d, #0d2344, #123b6f) !important;
+}
+
+.proj--maromba .proj__bg,
+.project-placeholder--drinks {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(255, 0, 180, .18) 0%, transparent 58%),
+    radial-gradient(ellipse at 25% 80%, rgba(0, 196, 255, .16) 0%, transparent 55%),
+    linear-gradient(160deg, #09030f, #101a37, #112c4f) !important;
+}
+
+.proj--economy .proj__bg,
+.project-placeholder--newsletter {
+  background:
+    radial-gradient(ellipse at 50% 60%, rgba(0, 196, 255, .22) 0%, transparent 60%),
+    linear-gradient(160deg, #001018, #041f36, #063a58) !important;
+}
+
+.proj--mythoss .proj__bg,
+.project-placeholder--automotive {
+  background:
+    radial-gradient(ellipse at 65% 35%, rgba(255, 255, 255, .12) 0%, transparent 58%),
+    radial-gradient(ellipse at 30% 70%, rgba(0, 196, 255, .14) 0%, transparent 55%),
+    linear-gradient(160deg, #070707, #101725, #1a2335) !important;
+}
+
+.project-placeholder {
+  min-height: 320px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background-color: #0a0a0a;
+  box-shadow: var(--shadow);
+}
+
+.project-showcase__placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 28px;
+}
+
+.project-gallery__item {
+  aspect-ratio: 4 / 5;
+  min-height: 280px;
+  border-radius: 20px;
+}
+
+.about-visual {
+  min-height: 420px;
+  aspect-ratio: 4 / 3;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background-color: #0a0a0a;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, .6);
+}
+
+.about-visual--studio {
+  background:
+    radial-gradient(circle at 30% 35%, rgba(0, 196, 255, .22), transparent 35%),
+    radial-gradient(circle at 70% 70%, rgba(255, 0, 180, .14), transparent 38%),
+    linear-gradient(145deg, #05070d, #0b1c32, #0f2746) !important;
+}
+
+.about-visual--performance {
+  background:
+    radial-gradient(circle at 52% 45%, rgba(0, 196, 255, .24), transparent 32%),
+    radial-gradient(circle at 75% 65%, rgba(106, 92, 255, .20), transparent 38%),
+    linear-gradient(145deg, #030509, #071426, #0b2f4d) !important;
+}
+
+.products-image--template,
+.products-image--landing {
+  background:
+    radial-gradient(circle at 30% 35%, rgba(0, 196, 255, .22), transparent 34%),
+    radial-gradient(circle at 76% 62%, rgba(255, 0, 180, .14), transparent 38%),
+    linear-gradient(145deg, #030509, #071426, #0b2f4d) !important;
+}
+
+.products-image {
+  min-height: 320px;
+}
+
+@media(max-width:900px) {
+  .about-visual {
+    min-height: 320px;
+  }
+
+  .project-placeholder {
+    min-height: 280px;
+  }
+}
+
+@media(max-width:560px) {
+  .products-image,
+  .about-visual,
+  .project-placeholder {
+    min-height: 240px;
+  }
+}

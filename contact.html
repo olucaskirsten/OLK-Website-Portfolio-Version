@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact — OLK Web &amp; SEO</title>
+<link href="img/favicon.png" rel="icon" type="image/png"/>
+<script>
+    if (sessionStorage.getItem("olkPageTransition") === "true") {
+      document.documentElement.classList.add("has-page-transition");
+    }
+  </script>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/contact.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+<div aria-hidden="true" class="page-transition">
+<span class="page-transition__panel"></span>
+<span class="page-transition__panel"></span>
+<span class="page-transition__panel"></span>
+</div>
+<div id="contactParticles"></div>
+<div id="header"></div>
+<section class="contact-section">
+<div class="container">
+<div class="contact-layout">
+<div class="contact-info">
+<p class="section-label contact-info__label" data-i18n="ct.info.label">Get in touch</p>
+<h2 class="contact-info__title" data-i18n="ct.info.title">We'd love to hear about your project</h2>
+<p class="contact-info__desc" data-i18n="ct.info.desc">Whether you need a new website, a landing page, SEO support or a full digital strategy — we're ready to help. Share your goals and we'll put together a tailored proposal.</p>
+<div class="contact-cards">
+<a class="contact-card" href="mailto:contact@olkbr.com">
+<span class="contact-card__icon">✉️</span>
+<div>
+<p class="contact-card__label" data-i18n="ct.card1.label">Email</p>
+<p class="contact-card__value">contact@olkbr.com</p>
+<p class="contact-card__note" data-i18n="ct.card1.note">We usually respond within 24 hours</p>
+</div>
+</a>
+<a class="contact-card" href="https://wa.me/5500000000000" rel="noopener" target="_blank">
+<span class="contact-card__icon">💬</span>
+<div>
+<p class="contact-card__label" data-i18n="ct.card2.label">WhatsApp</p>
+<p class="contact-card__value" data-i18n="ct.card2.value">Chat directly with us</p>
+<p class="contact-card__note" data-i18n="ct.card2.note">Quick replies during business hours</p>
+</div>
+</a>
+<div class="contact-card">
+<span class="contact-card__icon">🌍</span>
+<div>
+<p class="contact-card__label" data-i18n="ct.card3.label">Location</p>
+<p class="contact-card__value" data-i18n="ct.card3.value">Remote — Worldwide</p>
+<p class="contact-card__note" data-i18n="ct.card3.note">We work with clients globally</p>
+</div>
+</div>
+</div>
+</div>
+<div class="contact-form-wrap">
+<h3 class="contact-form-wrap__title" data-i18n="ct.form.title">Send a message</h3>
+<form action="#" id="contact-form" method="POST">
+<div class="form-row">
+<div class="form-group">
+<label data-i18n="ct.form.name" for="name">Your name</label>
+<input data-i18n-ph="ct.form.name.ph" id="name" name="name" placeholder="John Smith" required="" type="text"/>
+</div>
+<div class="form-group">
+<label data-i18n="ct.form.email" for="email">Email address</label>
+<input data-i18n-ph="ct.form.email.ph" id="email" name="email" placeholder="you@company.com" required="" type="email"/>
+</div>
+</div>
+<div class="form-group">
+<label data-i18n="ct.form.company" for="company">Company / Website URL</label>
+<input data-i18n-ph="ct.form.company.ph" id="company" name="company" placeholder="yourcompany.com" type="text"/>
+</div>
+<div class="form-group">
+<label data-i18n="ct.form.service" for="service">Service you need</label>
+<select id="service" name="service">
+<option data-i18n-val="ct.form.svc.default" value="">Select a service...</option>
+<option data-i18n-val="ct.form.svc.web" value="webdesign">Web Design &amp; Front-End Development</option>
+<option data-i18n-val="ct.form.svc.seo" value="seo">SEO (Google)</option>
+<option data-i18n-val="ct.form.svc.ecom" value="ecommerce">E-Commerce Setup</option>
+<option data-i18n-val="ct.form.svc.ads" value="ads">Paid Traffic (Meta Ads)</option>
+<option data-i18n-val="ct.form.svc.full" value="full">Full Digital Strategy</option>
+<option data-i18n-val="ct.form.svc.other" value="other">Other</option>
+</select>
+</div>
+<div class="form-group">
+<label data-i18n="ct.form.msg" for="message">Tell us about your project</label>
+<textarea data-i18n-ph="ct.form.msg.ph" id="message" name="message" placeholder="Describe your goals, timeline and any relevant details..." required=""></textarea>
+</div>
+<div class="form-submit">
+<button class="btn btn-grad" data-i18n="ct.form.submit" type="submit">Demo Form →</button>
+</div>
+<p class="form-status" id="form-status"></p>
+<p class="form-note" data-i18n="ct.form.note">No spam. No commitments. Just a conversation about your project.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<div id="footer"></div>
+<div id="whatsapp"></div>
+<script src="js/include.js"></script>
+<script src="js/main.js"></script>
+<script src="js/lang-en.js"></script>
+<script src="js/lang-pt.js"></script>
+<script src="js/lang-es.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/contact-form.js"></script>
+<script src="js/contact-particles.js"></script>
+<script src="js/page-transition.js"></script>
+<script src="js/cursor.js"></script>
+</body>
+</html>

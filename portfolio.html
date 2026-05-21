@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio — OLK Web &amp; SEO</title>
+<link href="img/favicon.png" rel="icon" type="image/png"/>
+<script>
+    if (sessionStorage.getItem("olkPageTransition") === "true") {
+      document.documentElement.classList.add("has-page-transition");
+    }
+  </script>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/portfolio.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+<div aria-hidden="true" class="page-transition">
+<span class="page-transition__panel"></span>
+<span class="page-transition__panel"></span>
+<span class="page-transition__panel"></span>
+</div>
+<div id="header"></div>
+<main>
+<section class="page-hero portfolio-hero">
+<div id="portfolioParticles"></div>
+<div class="page-hero__parallax" id="heroParallax"></div>
+<div class="page-hero__inner portfolio-hero__inner">
+<p class="section-label page-hero__label fade-up" data-i18n="pf.hero.label">Portfolio projects</p>
+<h1 class="page-hero__title fade-up d1" data-i18n-html="pf.hero.title"><span class="accent">Selected</span> Work</h1>
+<p class="page-hero__sub fade-up d2" data-i18n="pf.hero.sub">Projects developed for brands, creators and businesses across multiple industries. Each one represents a thoughtful approach to design, code and strategy — focused on clarity, performance and long-term growth.</p>
+</div>
+</section>
+<section class="portfolio-main">
+<div class="container">
+<div class="projects-grid">
+<article class="proj proj--fayson">
+<div class="proj__accent"></div>
+<a aria-label="View Photography Portfolio project" class="proj__visual" href="photography-portfolio.html">
+<div class="proj__bg"></div>
+</a>
+<div class="proj__info">
+<p class="proj__num" data-i18n="pf.p1.num">Project 01</p>
+<span class="proj__category" data-i18n="pf.p1.cat">Photography Portfolio</span>
+<h2 class="proj__title" data-i18n="pf.p1.title">Photography Portfolio Website</h2>
+<p class="proj__desc" data-i18n="pf.p1.desc">A complete portfolio website concept designed to showcase visual work with a clean, editorial aesthetic focused on impact, clarity and user experience.</p>
+<div class="proj__tags">
+<span class="proj__tag" data-i18n="pf.p1.t1">Web Design</span>
+<span class="proj__tag" data-i18n="pf.p1.t2">Front-End Dev</span>
+<span class="proj__tag" data-i18n="pf.p1.t3">Portfolio</span>
+</div>
+<a class="proj__link" href="photography-portfolio.html">
+<span data-i18n="pf.p1.link">View Project</span>
+<span class="proj__link-arrow">→</span>
+</a>
+</div>
+</article>
+<article class="proj proj--maromba">
+<div class="proj__accent"></div>
+<a aria-label="View Premium Drinks Brand project" class="proj__visual" href="premium-drinks-portfolio.html">
+<div class="proj__bg"></div>
+</a>
+<div class="proj__info">
+<p class="proj__num" data-i18n="pf.p2.num">Project 02</p>
+<span class="proj__category" data-i18n="pf.p2.cat">Premium Drinks Brand</span>
+<h2 class="proj__title" data-i18n="pf.p2.title">Landing Page for a Premium Drinks Brand</h2>
+<p class="proj__desc" data-i18n="pf.p2.desc">A high-converting landing page concept for a premium beverage brand, structured to support product presentation, distributor interest and commercial growth.</p>
+<div class="proj__tags">
+<span class="proj__tag" data-i18n="pf.p2.t1">Landing Page</span>
+<span class="proj__tag" data-i18n="pf.p2.t2">E-Commerce</span>
+<span class="proj__tag" data-i18n="pf.p2.t3">Conversion CRO</span>
+</div>
+<a class="proj__link" href="premium-drinks-portfolio.html">
+<span data-i18n="pf.p2.link">View Project</span>
+<span class="proj__link-arrow">→</span>
+</a>
+</div>
+</article>
+<article class="proj proj--economy">
+<div class="proj__accent"></div>
+<a aria-label="View Newsletter Landing Page project" class="proj__visual" href="newsletter-landing-page.html">
+<div class="proj__bg"></div>
+</a>
+<div class="proj__info">
+<p class="proj__num" data-i18n="pf.p3.num">Project 03</p>
+<span class="proj__category" data-i18n="pf.p3.cat">Newsletter Landing Page</span>
+<h2 class="proj__title" data-i18n="pf.p3.title">Newsletter Subscription Landing Page</h2>
+<p class="proj__desc" data-i18n="pf.p3.desc">A focused newsletter landing page concept designed to communicate value and drive signups with a clear, distraction-free layout and compelling copy structure.</p>
+<div class="proj__tags">
+<span class="proj__tag" data-i18n="pf.p3.t1">Landing Page</span>
+<span class="proj__tag" data-i18n="pf.p3.t2">Newsletter</span>
+<span class="proj__tag" data-i18n="pf.p3.t3">Lead Gen</span>
+</div>
+<a class="proj__link" href="newsletter-landing-page.html">
+<span data-i18n="pf.p3.link">View Project</span>
+<span class="proj__link-arrow">→</span>
+</a>
+</div>
+</article>
+<article class="proj proj--mythoss">
+<div class="proj__accent"></div>
+<a aria-label="View Premium Automotive Brand project" class="proj__visual" href="premium-automotive-portfolio.html">
+<div class="proj__bg"></div>
+</a>
+<div class="proj__info">
+<p class="proj__num" data-i18n="pf.p4.num">Project 04</p>
+<span class="proj__category" data-i18n="pf.p4.cat">Premium Automotive Brand</span>
+<h2 class="proj__title" data-i18n="pf.p4.title">Landing Page for a Premium Automotive Brand</h2>
+<p class="proj__desc" data-i18n="pf.p4.desc">A sophisticated landing page concept designed to present high-end automotive services with clarity, trust and a premium digital experience.</p>
+<div class="proj__tags">
+<span class="proj__tag" data-i18n="pf.p4.t1">Landing Page</span>
+<span class="proj__tag" data-i18n="pf.p4.t2">Luxury</span>
+<span class="proj__tag" data-i18n="pf.p4.t3">Automotive</span>
+</div>
+<a class="proj__link" href="premium-automotive-portfolio.html">
+<span data-i18n="pf.p4.link">View Project</span>
+<span class="proj__link-arrow">→</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<div class="container">
+<h2 class="cta-section__title" data-i18n="pf.cta.title">Have a project in mind?</h2>
+<p class="cta-section__sub" data-i18n="pf.cta.sub">Let's build something that performs as well as it looks.</p>
+<a class="btn btn-grad" data-i18n="pf.cta.btn" href="contact.html">Contact Us</a>
+</div>
+</section>
+</main>
+<div id="footer"></div>
+<div id="whatsapp"></div>
+<script src="js/include.js"></script>
+<script src="js/main.js"></script>
+<script src="js/lang-en.js"></script>
+<script src="js/lang-pt.js"></script>
+<script src="js/lang-es.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/portfolio-particles.js"></script>
+<script src="js/page-transition.js"></script>
+<script src="js/cursor.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Dependency folders
+node_modules/
+
+# Build folders
+dist/
+build/
+
+# Vercel
+.vercel/
+
+# IDEs
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
