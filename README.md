@@ -1,5 +1,7 @@
 # OLK Web & SEO — Public Portfolio Website
 
+LINK TO VIEW THE PROJECT ONLINE: https://olk-website-portfolio-version.vercel.app
+
 A public, portfolio-ready version of the OLK Web & SEO website, built with static HTML, CSS and JavaScript. The project presents a modern digital studio experience with multilingual content, animated sections, page transitions, particles, reusable components and anonymized portfolio case studies.
 
 ## Overview
